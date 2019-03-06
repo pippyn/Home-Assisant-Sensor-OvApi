@@ -162,16 +162,16 @@ class OvApiSensor(Entity):
     def device_state_attributes(self):
         """Return the state attributes."""
         if self._line_filter == ATTR_LINE_FILTER:
-            filter = None
+            line_filter = None
         else:
-            filter = self._line_filter
+            line_filter = self._line_filter
         if self._sensor_number == 0:
             return{
                 ATTR_NAME: self._name,
                 ATTR_STOP_CODE: self._stop_code,
                 ATTR_TIMING_POINT_CODE: self._timing_point_code,
                 ATTR_ROUTE_CODE: self._route_code,
-                ATTR_LINE_FILTER: filter,
+                ATTR_LINE_FILTER: line_filter,
                 ATTR_ICON: self._icon,
                 ATTR_DESTINATION: self._destination,
                 ATTR_PROVIDER: self._provider,
@@ -190,7 +190,7 @@ class OvApiSensor(Entity):
                 ATTR_STOP_CODE: self._stop_code,
                 ATTR_TIMING_POINT_CODE: self._timing_point_code,
                 ATTR_ROUTE_CODE: self._route_code,
-                ATTR_LINE_FILTER: filter,
+                ATTR_LINE_FILTER: line_filter,
                 ATTR_ICON: self._icon,
                 ATTR_DESTINATION: self._destination,
                 ATTR_PROVIDER: self._provider,
